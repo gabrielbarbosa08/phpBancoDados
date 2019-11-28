@@ -25,7 +25,7 @@
                         <a class="nav-link" href="#">Pacientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Usuarios</a>
+                        <a class="nav-link" href="index.php?p=especialidade">Especialidade</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?p=endereco">Endereco</a>
@@ -71,6 +71,8 @@
     if (isset($_GET['p'])) {
         if ($_GET['p'] == "endereco")
             include("pages/add-endereco.php");
+        if ($_GET['p'] == "especialidade")
+            include("pages/add-especialidade.php");
     } else {
         include("pages/home.php");
     }
