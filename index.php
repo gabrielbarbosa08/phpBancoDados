@@ -1,4 +1,6 @@
-<?php include_once("config.php") ?>
+<?php include_once("config.php")
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -34,6 +36,9 @@
 
                 <?php if (session_status() != PHP_SESSION_ACTIVE) {
                     session_start();
+
+                    
+
                 } ?>
 
                 <?php if (!isset($_SESSION["user"])) : ?>
@@ -66,6 +71,8 @@
         </div>
     </nav>
 
+
+
     <?php
     include("pages/mensagens.php");
     if (isset($_GET['p'])) {
@@ -75,8 +82,10 @@
             include("pages/add-especialidade.php");
     } else {
         include("pages/home.php");
+
     }
-    ?>
+
+?>
 
     <footer class="mt-2 p-3 bg-dark text-light text-center fixed-bottom">
         <p>feito por <a href="https://fabianomoreira.blogspot.com">Fabiano Moreira</a></p>
